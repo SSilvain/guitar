@@ -1,0 +1,36 @@
+
+
+block vars
+	- var imgs = [ "img/store-section/guitar (1).jpg", "img/store-section/guitar (2).jpg", "img/store-section/guitar (3).jpg" ]
+	- var titles = [ "The Essential Les Paul", "J-45 Standard", "Hummingbird Standard" ]
+	- var costs = [ "$1,299.00","$1,699.00","$2,099.00" ]
+	- var imgs2 = [  "img/store-section/guitar (4).jpg", "img/store-section/guitar (5).jpg", "img/store-section/guitar (6).jpg"]
+	- var titles2 = ["Active Precision Bass® PH V","Redondo Special","Professional II Stratocaster®" ]
+	- var costs2 = ["$4,199.00","$2,800.00","$3,199.00" ]
+
+mixin store-card(img, title, cost)
+	.store__card
+		.store__card-ibg 
+			img.store__card-img(src=img)
+		.store__card-title= title
+		.store__card-cost= cost
+
+
+
+h2.store__title.title Check out the 
+	span Store
+.store__section
+	.store__section-header
+		h3.store__section-title NEW ON THE BOARD
+		.store__section-all view all
+	.store__cards 
+		each val, index in titles
+			+store-card(imgs[index], titles[index], costs[index])
+
+.store__section
+	.store__section-header
+		h3.store__section-title TOP SELLING
+		.store__section-all view all
+	.store__cards 
+		each val, index in titles2
+			+store-card(imgs2[index], titles2[index], costs2[index])

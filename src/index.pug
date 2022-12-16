@@ -1,0 +1,34 @@
+extends tpl
+
+block vars
+	- var title = "Home"
+	
+block content
+	main.page
+		.hero
+			.hero__container
+				include scss/pages/index/01-hero
+		
+		.store
+			.store__container
+				include scss/pages/index/02-store
+		
+		.categories
+			.categories__container
+				include scss/pages/index/03-categories
+		
+		.brands
+			.brands__container
+				include scss/pages/index/04-brands
+		
+		.rhythm
+			.rhythm__container
+				include scss/pages/index/05-rhythm
+		
+		.customer
+			.customer__container
+				include scss/pages/index/06-customer
+		
+		.apps
+			.apps__container
+				include scss/pages/index/07-apps

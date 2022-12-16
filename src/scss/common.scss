@@ -1,0 +1,20 @@
+// Заголовки, общие БЄМ блоки и проче...
+.title{
+	text-align: center;
+	font-family: var(--slave-font);
+	font-size: 34px;
+	margin-bottom: 20px;
+	padding: 20px 0;
+	@media (min-width:$mobile){
+		margin-bottom: 20px;
+		font-size: 44px;
+		  
+	}
+
+	span{
+		color: var(--main-color);
+	}
+	&-dark{
+		color: var(--light-text)
+	}
+}

@@ -1,0 +1,61 @@
+.rhythm {
+	padding: 80px 0 40px;
+	background: var(--main-color-text);
+
+	&__title {}
+
+	&__wrapper {
+		padding: 40px 0;
+		@media (min-width:$mobileSmall){
+			 display: grid;
+			 grid-template-columns: repeat(2, 1fr); 
+			 grid-gap: 0;
+			//  place-content: center;
+		}
+		@media (min-width:$mobile){
+			 grid-template-columns: repeat(3,1fr); 
+		}
+	}
+
+	&__box {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 20px;
+	}
+
+	&__box-ico {
+		padding: 18px;
+		background: rgba(38, 38, 38, 1);
+		border-radius: 15px;
+		margin-bottom: 40px;
+
+		svg {
+			width: 28.67px;
+			height: 28.67px;
+			fill: rgba(164, 164, 164, 1);
+		}
+	}
+
+	&__box-title {
+		color: var(--light-text);
+		font-weight: 600;
+		font-size: 18px;
+		// line-height: 27px;
+		line-height: math.div(27, 18);
+		letter-spacing: 0.08em;
+		text-align: center;
+		text-transform: uppercase;
+		padding: 15px 0;
+	}
+
+	&__box-desc {
+		color: var(--slave-color-text);
+		font-weight: 400;
+		font-size: 14px;
+		// line-height: 21px;
+		line-height: math.div(21, 14);
+		text-align: center;
+		text-transform: capitalize;
+	}
+}

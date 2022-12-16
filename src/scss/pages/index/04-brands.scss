@@ -1,0 +1,18 @@
+.brands{
+	padding: 40px 0;
+	&__title{
+		
+		span{}
+	}
+	&__wrapper{
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-gap: 40px;
+	}
+	
+	&__box-ibg{
+		padding-bottom: 40%;
+		img	{
+			object-fit: contain;}
+	}
+}

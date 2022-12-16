@@ -1,0 +1,135 @@
+//====================================================================================================
+.header{
+	// margin-bottom: 40px;
+	padding: 40px 0;
+	&__container{}
+	&__logo{
+		display: inline-flex;
+		&-icon{
+			height: 20px;
+			width: 20px;
+			fill: var(--main-color);
+		}
+		&-text{
+			font-family: var(--slave-font);
+			font-size: 20px;
+			line-height: 1.2;
+			margin-left: 10px;
+			// font-weight: 600;
+		}
+	}
+	&__menu{
+		display: inline-flex;
+	}
+}
+.menu{
+	&__icon{}
+	&__body{
+		overflow: auto;
+		// box-sizing: border-box;
+		padding: 80px 40px 40px 40px;
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		transform: translateX(-100%);
+		background: var(--main-color);
+		// transition: transform .3s ease;
+		.menu-open & {
+			// transform: translateX(0);
+			// left: 0;
+		}
+	}
+	&__list{
+		@media (min-width:$mobile){
+			display: inline-flex;
+			gap: 20px;
+		}
+	}
+	&__item{
+		text-align: right;
+		&:not(:last-child){
+			margin-bottom: 20px;
+		}
+	}
+	&__link{
+		opacity: 0;
+		display: inline-block;
+		font-size: 32px;
+		color: var(--light-text);
+		transform: translateX(-200px);
+	}
+}
+
+//====================================================================================================
+
+//Burger
+
+.icon-menu {
+	margin-top: 0.2125rem;
+	display: block;
+	position: absolute;
+	top: 40px;
+	right: 40px;
+	width: rem(25);
+	height: 0.725rem;
+	z-index: 99999995;
+
+	@media (any-hover: none) {
+		cursor: default;
+	}
+
+	span,
+	&::before,
+	&::after {
+		content: "";
+		transition: all 0.3s ease 0s;
+		left: 0;
+		position: absolute;
+		width: 100%;
+		height: rem(2);
+		background-color: #303030;
+	}
+
+	&::before {
+		top: 0;
+	}
+
+	&::after {
+		bottom: 0;
+	}
+
+	span {
+		top: 50%;
+		transform: translateY(-50%);
+		width: 80%;
+	}
+
+	.menu-open & {
+		span {
+			background-color: #fff;
+			width: 0;
+		}
+
+		&::before,
+		&::after {
+			background-color: #fff;
+		}
+
+		&::before {
+			top: calc(50% - rem(1));
+			transform: rotate(-45deg);
+		}
+
+		&::after {
+			bottom: calc(50% - rem(1));
+			transform: rotate(45deg);
+		}
+	}
+
+
+	@media (min-width: $mobile) {
+		display: none;
+	}
+}

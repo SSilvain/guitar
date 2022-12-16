@@ -1,0 +1,24 @@
+-var ico = ["1","2","3"]
+-var title = ["Smooth Browsing","EASY Delivery","SwiFT PAYMENTS"]
+-var desc = ["Lorem ipsum dolor sit amet, consectetur adipiscing elit.","Lorem ipsum dolor sit amet, consectetur adipiscing elit.","Lorem ipsum dolor sit amet, consectetur adipiscing elit."]
+.rhythm__title.title.title-dark Why try <span>Rhythm?</span>
+.rhythm__wrapper
+	.rhythm__box
+		.rhythm__box-ico
+			svg 
+				use(xlink:href="@img/icons/icons.svg#logo")
+		.rhythm__box-title= title[0]
+		.rhythm__box-desc= desc[0]
+	.rhythm__box
+		.rhythm__box-ico
+			svg 
+				use(xlink:href="img/icons/icons.svg#why_ico_"+ico[1])
+		.rhythm__box-title= title[1]
+		.rhythm__box-desc= desc[1]
+	.rhythm__box
+		.rhythm__box-ico
+			svg 
+				use(xlink:href="img/icons/icons.svg#why_ico_"+ico[2])
+		.rhythm__box-title= title[2]
+		.rhythm__box-desc= desc[2]
+	

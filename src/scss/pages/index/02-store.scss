@@ -1,0 +1,103 @@
+.store {
+	// background: rgba(#000, .7);
+	padding: 40px 0;
+	&__container {}
+
+	&__title {
+		margin-bottom: 20px;
+		span {}
+	}
+
+	&__section {
+		padding: 40px 0;
+	}
+
+	&__section-header {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		margin-bottom: 30px;
+
+		@media (min-width:$mobile) {
+			margin-bottom: 20px;
+
+		}
+	}
+
+	&__section-title {
+		text-transform: uppercase;
+		font-weight: 600;
+		font-size: 20px;
+		line-height: 1.2;
+		letter-spacing: 0.08em;
+
+	}
+
+	&__section-all {
+		justify-self: end;
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 30px;
+		/* identical to box height */
+
+
+		color: var(--slave-color-text);
+	}
+
+	&__cards {
+		@media (min-width:$mobileSmall){
+			 display: grid;
+			 grid-template-columns: repeat(2,1fr);
+			 grid-gap: 20px; 
+		}
+		@media (min-width:$mobile){
+			 display: grid;
+			 grid-template-columns: repeat(3,1fr);
+			 grid-gap: 20px; 
+		}
+	}
+
+	&__card {
+
+		margin-bottom: 40px;
+
+		@media (min-width:$mobile) {
+			margin-bottom: 20px;
+
+		}
+	}
+
+	&__card-ibg {
+		padding-bottom: 40%;
+		margin-bottom: 5px;
+
+		@media (min-width:$mobile) {
+			margin-bottom: 20px;
+
+		}
+	}
+
+	&__card-img {}
+
+	&__card-title {
+		font-weight: 500;
+		line-height: 1.5;
+		// margin-bottom: 0px;
+
+		@media (min-width:$mobile) {
+			// margin-bottom: 0px;
+
+		}
+	}
+
+	&__card-cost {
+		font-weight: 400;
+		font-size: 14px;
+		line-height: math.div(21 ,14 );
+
+		// margin-bottom: 20px;
+		@media (min-width:$mobile) {
+			// margin-bottom: 20px;
+
+		}
+	}
+}
